@@ -6,8 +6,6 @@ const connectDB = async(req,res)=>{
         console.log("Successfully Database is connected 🎉");
         
     } catch (error) {
-        console.log(error);
-        
         console.log(`Cannot connect with DataBase !!`);
         
     }
