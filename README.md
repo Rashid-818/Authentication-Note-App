@@ -13,18 +13,27 @@ A secure backend RESTful API built for a note-taking application featuring user 
 
 - **Base URL:** [https://authentication-note-app-1.onrender.com](https://authentication-note-app-1.onrender.com)
 
-## Tech Stack
+## Tech Stack & Dependencies
 
-- **Runtime & Framework:** Node.js, Express.js
-- **Database:** MongoDB, Mongoose
-- **Authentication:** JSON Web Tokens (JWT)
+- **Runtime Environment:** Node.js
+- **Framework:** Express.js
+- **Database & ODM:** MongoDB, Mongoose
+- **Authentication & Security:** 
+                             - `jsonwebtoken` (JWT for session/token-based auth)
+                             - `bcrypt` (For secure password hashing)
+- **Environment Management:** `dotenv`
 - **Deployment:** Render
 
 ## API Endpoints (Postman Testing)
 
-- **Register:** `POST /api/v1/users/register` (or your specific route)
+- **Register:** `POST /api/v1/users/signup` 
 - **Login:** `POST /api/v1/users/login`
-- **Create Note:** `POST /api/v1/notes`
+
+- **Create Note:** `POST /api/v1/notes/`
+- **Read All Note:** `GET /api/v1/notes/`
+- **Read single Note:** `GET /api/v1/notes/:id`
+- **Update Note:** `PATCH /api/v1/notes/:id`
+- **Delete Note:** `DELETE /api/v1/notes/:id`
 
 ## Getting Started Locally
 

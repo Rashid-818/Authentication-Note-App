@@ -11,7 +11,7 @@ import { createNote, deleteNote, getNotes, getOneNotes, updateNote } from "../co
 noteRouter.post("/", requireAuth, createNote)
 noteRouter.get("/", requireAuth, getNotes)
 noteRouter.get("/:id", requireAuth, getOneNotes)
-noteRouter.patch("update/:id", requireAuth, updateNote)
+noteRouter.patch("/:id", requireAuth, updateNote)
 noteRouter.delete("/:id", requireAuth, deleteNote)
 
 
