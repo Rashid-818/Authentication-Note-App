@@ -8,11 +8,11 @@ import { requireAuth } from '../middlewares/jwt.middle.js'
 import { createNote, deleteNote, getNotes, getOneNotes, updateNote } from "../controllers/note.js";
 
 
-noteRouter.post("/note", requireAuth, createNote)
-noteRouter.get("/note", requireAuth, getNotes)
-noteRouter.get("/note/:id", requireAuth, getOneNotes)
-noteRouter.patch("/note/update/:id", requireAuth, updateNote)
-noteRouter.delete("/note/:id", requireAuth, deleteNote)
+noteRouter.post("/", requireAuth, createNote)
+noteRouter.get("/", requireAuth, getNotes)
+noteRouter.get("/:id", requireAuth, getOneNotes)
+noteRouter.patch("update/:id", requireAuth, updateNote)
+noteRouter.delete("/:id", requireAuth, deleteNote)
 
 
 export default  noteRouter
